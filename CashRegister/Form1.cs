@@ -58,7 +58,7 @@ namespace CashRegister
             {
                 tendered = Convert.ToInt32(tenderedInput.Text);
                 // Prevents paying less than the total price
-                if (tendered > totalPrice)
+                if (tendered >= totalPrice)
                 {
                     change = tendered - totalPrice;
                     changeOuput.Text = $"{change.ToString("C")}";
