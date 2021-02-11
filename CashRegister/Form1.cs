@@ -10,6 +10,17 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+
+// Jacob Boyd
+// Mr. T
+// ICS3U
+/*
+Basic cash register for Chicken.Co. 
+It calculates total price and change according to the number of each item,
+as well as prints a receipt.
+*/
+
+
 namespace CashRegister
 {
     public partial class Form1 : Form
