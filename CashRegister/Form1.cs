@@ -35,6 +35,7 @@ namespace CashRegister
 
         private void CalculateTotalsButton_Click(object sender, EventArgs e)
         {
+            //Calculates subtotal, tax amount and total price
             chickenNumber = Convert.ToInt32(chickenInput.Text);
             gravyNumber = Convert.ToInt32(gravyInput.Text);
             drinkNumber = Convert.ToInt32(drinkInput.Text);
@@ -51,9 +52,12 @@ namespace CashRegister
 
         private void CalculateChangeButton_Click(object sender, EventArgs e)
         {
+            // Calculates change
+            // Prevents incorrect inputs from crashinng the program
             try
             {
                 tendered = Convert.ToInt32(tenderedInput.Text);
+                // Prevents paying less than the total price
                 if (tendered > totalPrice)
                 {
                     change = tendered - totalPrice;
@@ -72,6 +76,8 @@ namespace CashRegister
 
         private void ReceiptButton_Click(object sender, EventArgs e)
         {
+            // Prints and formats the receipt
+            // Prevents the receipt from printing without all the values
             if ((tendered > totalPrice) && (totalPrice > 0))
             {
                 receiptLabel.Visible = true;
@@ -140,6 +146,7 @@ namespace CashRegister
 
         private void NewOrderButton_Click(object sender, EventArgs e)
         {
+            // Resets the program
             subTotal = 0;
             taxAmount = 0;
             totalPrice = 0;
