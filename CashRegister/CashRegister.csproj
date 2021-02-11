@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0e312d0c07b8c79a94b3a477bb27c7f7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Desktop-Buffet-Chicken.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\typeWriter.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
