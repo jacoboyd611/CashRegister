@@ -35,25 +35,18 @@ namespace CashRegister
 
         private void CalculateTotalsButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                chickenNumber = Convert.ToInt32(chickenInput.Text);
-                gravyNumber = Convert.ToInt32(gravyInput.Text);
-                drinkNumber = Convert.ToInt32(drinkInput.Text);
-                subTotal = (chickenPrice * chickenNumber) + (gravyPrice * gravyNumber)
-                    + (drinkPrice * drinkNumber);
-                subTotalOutput.Text = $"{subTotal.ToString("C")}";
+            chickenNumber = Convert.ToInt32(chickenInput.Text);
+            gravyNumber = Convert.ToInt32(gravyInput.Text);
+            drinkNumber = Convert.ToInt32(drinkInput.Text);
+            subTotal = (chickenPrice * chickenNumber) + (gravyPrice * gravyNumber)
+                + (drinkPrice * drinkNumber);
+            subTotalOutput.Text = $"{subTotal.ToString("C")}";
 
-                taxAmount = taxRate * subTotal;
-                taxOutput.Text = $"{taxAmount.ToString("C")}";
+            taxAmount = taxRate * subTotal;
+            taxOutput.Text = $"{taxAmount.ToString("C")}";
 
-                totalPrice = taxAmount + subTotal;
-                totalOutput.Text = $"{totalPrice.ToString("C")}";
-            }
-            catch
-            {
-                totalOutput.Text = "NUMBERS ONLY";
-            }
+            totalPrice = taxAmount + subTotal;
+            totalOutput.Text = $"{totalPrice.ToString("C")}";
         }
 
         private void CalculateChangeButton_Click(object sender, EventArgs e)
@@ -137,12 +130,12 @@ namespace CashRegister
                 Thread.Sleep(500);
 
 
-            } 
+            }
             else
             {
                 changeOuput.Text = "ERROR";
             }
-            
+
         }
 
         private void NewOrderButton_Click(object sender, EventArgs e)

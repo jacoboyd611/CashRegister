@@ -32,9 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.chickenInput = new System.Windows.Forms.TextBox();
-            this.gravyInput = new System.Windows.Forms.TextBox();
-            this.drinkInput = new System.Windows.Forms.TextBox();
             this.calculateTotalsButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,6 +52,12 @@
             this.numbersReceiptOutput = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.chickenInput = new System.Windows.Forms.NumericUpDown();
+            this.gravyInput = new System.Windows.Forms.NumericUpDown();
+            this.drinkInput = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.chickenInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gravyInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinkInput)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,36 +95,6 @@
             this.label3.Size = new System.Drawing.Size(153, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Number of Drinks";
-            // 
-            // chickenInput
-            // 
-            this.chickenInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chickenInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chickenInput.Location = new System.Drawing.Point(225, 9);
-            this.chickenInput.Name = "chickenInput";
-            this.chickenInput.Size = new System.Drawing.Size(51, 26);
-            this.chickenInput.TabIndex = 3;
-            this.chickenInput.Text = "0";
-            // 
-            // gravyInput
-            // 
-            this.gravyInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gravyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gravyInput.Location = new System.Drawing.Point(225, 41);
-            this.gravyInput.Name = "gravyInput";
-            this.gravyInput.Size = new System.Drawing.Size(51, 26);
-            this.gravyInput.TabIndex = 4;
-            this.gravyInput.Text = "0";
-            // 
-            // drinkInput
-            // 
-            this.drinkInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.drinkInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinkInput.Location = new System.Drawing.Point(225, 72);
-            this.drinkInput.Name = "drinkInput";
-            this.drinkInput.Size = new System.Drawing.Size(51, 26);
-            this.drinkInput.TabIndex = 5;
-            this.drinkInput.Text = "0";
             // 
             // calculateTotalsButton
             // 
@@ -358,6 +331,30 @@
             this.label11.TabIndex = 31;
             this.label11.Text = " ";
             // 
+            // chickenInput
+            // 
+            this.chickenInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chickenInput.Location = new System.Drawing.Point(225, 9);
+            this.chickenInput.Name = "chickenInput";
+            this.chickenInput.Size = new System.Drawing.Size(51, 26);
+            this.chickenInput.TabIndex = 32;
+            // 
+            // gravyInput
+            // 
+            this.gravyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gravyInput.Location = new System.Drawing.Point(225, 42);
+            this.gravyInput.Name = "gravyInput";
+            this.gravyInput.Size = new System.Drawing.Size(51, 26);
+            this.gravyInput.TabIndex = 33;
+            // 
+            // drinkInput
+            // 
+            this.drinkInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinkInput.Location = new System.Drawing.Point(225, 73);
+            this.drinkInput.Name = "drinkInput";
+            this.drinkInput.Size = new System.Drawing.Size(51, 26);
+            this.drinkInput.TabIndex = 34;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +362,9 @@
             this.BackgroundImage = global::CashRegister.Properties.Resources.chickenBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.drinkInput);
+            this.Controls.Add(this.gravyInput);
+            this.Controls.Add(this.chickenInput);
             this.Controls.Add(this.numbersReceiptOutput);
             this.Controls.Add(this.wordsReceiptOutput);
             this.Controls.Add(this.newOrderButton);
@@ -382,9 +382,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.calculateTotalsButton);
-            this.Controls.Add(this.drinkInput);
-            this.Controls.Add(this.gravyInput);
-            this.Controls.Add(this.chickenInput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -394,6 +391,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Chicken.Co";
+            ((System.ComponentModel.ISupportInitialize)(this.chickenInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gravyInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinkInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,9 +404,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox chickenInput;
-        private System.Windows.Forms.TextBox gravyInput;
-        private System.Windows.Forms.TextBox drinkInput;
         private System.Windows.Forms.Button calculateTotalsButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -427,6 +424,9 @@
         private System.Windows.Forms.Label numbersReceiptOutput;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown chickenInput;
+        private System.Windows.Forms.NumericUpDown gravyInput;
+        private System.Windows.Forms.NumericUpDown drinkInput;
     }
 }
 
