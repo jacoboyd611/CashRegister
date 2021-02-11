@@ -59,6 +59,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,6 +71,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,6 +83,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,6 +95,7 @@
             // 
             // chickenInput
             // 
+            this.chickenInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chickenInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chickenInput.Location = new System.Drawing.Point(225, 9);
             this.chickenInput.Name = "chickenInput";
@@ -101,6 +105,7 @@
             // 
             // gravyInput
             // 
+            this.gravyInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gravyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gravyInput.Location = new System.Drawing.Point(225, 41);
             this.gravyInput.Name = "gravyInput";
@@ -110,6 +115,7 @@
             // 
             // drinkInput
             // 
+            this.drinkInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.drinkInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drinkInput.Location = new System.Drawing.Point(225, 72);
             this.drinkInput.Name = "drinkInput";
@@ -119,6 +125,7 @@
             // 
             // calculateTotalsButton
             // 
+            this.calculateTotalsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.calculateTotalsButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.calculateTotalsButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.calculateTotalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -132,6 +139,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,6 +151,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +163,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,6 +175,7 @@
             // 
             // totalOutput
             // 
+            this.totalOutput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.totalOutput.BackColor = System.Drawing.SystemColors.Control;
             this.totalOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalOutput.Location = new System.Drawing.Point(104, 215);
@@ -175,6 +186,7 @@
             // 
             // taxOutput
             // 
+            this.taxOutput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.taxOutput.BackColor = System.Drawing.SystemColors.Control;
             this.taxOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxOutput.Location = new System.Drawing.Point(104, 184);
@@ -185,6 +197,7 @@
             // 
             // subTotalOutput
             // 
+            this.subTotalOutput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.subTotalOutput.BackColor = System.Drawing.SystemColors.Control;
             this.subTotalOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subTotalOutput.Location = new System.Drawing.Point(118, 155);
@@ -195,6 +208,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(19, 253);
             this.label7.Name = "label7";
@@ -204,6 +218,7 @@
             // 
             // tenderedInput
             // 
+            this.tenderedInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tenderedInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenderedInput.Location = new System.Drawing.Point(225, 275);
             this.tenderedInput.Name = "tenderedInput";
@@ -212,6 +227,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.BackColor = System.Drawing.SystemColors.Control;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,6 +240,7 @@
             // 
             // calculateChangeButton
             // 
+            this.calculateChangeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.calculateChangeButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.calculateChangeButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.calculateChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -237,6 +254,7 @@
             // 
             // receiptButton
             // 
+            this.receiptButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.receiptButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.receiptButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.receiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -250,6 +268,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.BackColor = System.Drawing.SystemColors.Control;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,6 +281,7 @@
             // 
             // changeOuput
             // 
+            this.changeOuput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.changeOuput.BackColor = System.Drawing.SystemColors.Control;
             this.changeOuput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeOuput.Location = new System.Drawing.Point(112, 357);
@@ -272,6 +292,7 @@
             // 
             // receiptLabel
             // 
+            this.receiptLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.receiptLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.receiptLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptLabel.Location = new System.Drawing.Point(360, 13);
@@ -283,6 +304,7 @@
             // 
             // newOrderButton
             // 
+            this.newOrderButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.newOrderButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.newOrderButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.newOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -296,6 +318,7 @@
             // 
             // wordsReceiptOutput
             // 
+            this.wordsReceiptOutput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.wordsReceiptOutput.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.wordsReceiptOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wordsReceiptOutput.Location = new System.Drawing.Point(395, 102);
@@ -306,6 +329,7 @@
             // 
             // numbersReceiptOutput
             // 
+            this.numbersReceiptOutput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numbersReceiptOutput.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.numbersReceiptOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numbersReceiptOutput.Location = new System.Drawing.Point(511, 102);
@@ -317,6 +341,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Location = new System.Drawing.Point(12, 9);
             this.label10.Name = "label10";
@@ -325,6 +350,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Location = new System.Drawing.Point(12, 148);
             this.label11.Name = "label11";

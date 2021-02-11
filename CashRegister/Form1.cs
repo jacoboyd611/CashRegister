@@ -19,9 +19,9 @@ namespace CashRegister
             InitializeComponent();
         }
 
-        double chickenPrice = 4.00;
+        double chickenPrice = 2.50;
         double gravyPrice = 1.25;
-        double drinkPrice = 2.00;
+        double drinkPrice = 1.50;
         int chickenNumber;
         int gravyNumber;
         int drinkNumber;
@@ -86,7 +86,7 @@ namespace CashRegister
                 numbersReceiptOutput.Visible = true;
                 SoundPlayer printSound = new SoundPlayer(Properties.Resources.typeWriter);
                 Refresh();
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
 
                 printSound.Play();
                 receiptLabel.Text = "\n\nChicken.Co";
