@@ -41,13 +41,21 @@ namespace CashRegister
             drinkNumber = Convert.ToInt32(drinkInput.Text);
             subTotal = (chickenPrice * chickenNumber) + (gravyPrice * gravyNumber)
                 + (drinkPrice * drinkNumber);
-            subTotalOutput.Text = $"{subTotal.ToString("C")}";
-
             taxAmount = taxRate * subTotal;
-            taxOutput.Text = $"{taxAmount.ToString("C")}";
-
             totalPrice = taxAmount + subTotal;
-            totalOutput.Text = $"{totalPrice.ToString("C")}";
+            if (totalPrice > 0) 
+            {
+                subTotalOutput.Text = $"{subTotal.ToString("C")}";
+                taxOutput.Text = $"{taxAmount.ToString("C")}";
+                totalOutput.Text = $"{totalPrice.ToString("C")}";
+
+                calculateChangeButton.Enabled = true;
+                calculateTotalsButton.Enabled = false;
+            }
+            else
+            {
+                totalOutput.Text = "ERROR";
+            }
         }
 
         private void CalculateChangeButton_Click(object sender, EventArgs e)
@@ -60,12 +68,15 @@ namespace CashRegister
                 // Prevents paying less than the total price
                 if (tendered >= totalPrice)
                 {
+                    receiptButton.Enabled = true;
+                    calculateChangeButton.Enabled = false;
+
                     change = tendered - totalPrice;
                     changeOuput.Text = $"{change.ToString("C")}";
                 }
                 else
                 {
-                    changeOuput.Text = "ERROR";
+                    changeOuput.Text = "NOT ENOUGH";
                 }
             }
             catch
@@ -77,70 +88,62 @@ namespace CashRegister
         private void ReceiptButton_Click(object sender, EventArgs e)
         {
             // Prints and formats the receipt
-            // Prevents the receipt from printing without all the values
-            if ((tendered >= totalPrice) && (totalPrice > 0))
-            {
-                receiptLabel.Visible = true;
-                wordsReceiptOutput.Visible = true;
-                numbersReceiptOutput.Visible = true;
-                SoundPlayer printSound = new SoundPlayer(Properties.Resources.typeWriter);
-                Refresh();
-                Thread.Sleep(1000);
+            receiptButton.Enabled = false;
+            receiptLabel.Visible = true;
+            wordsReceiptOutput.Visible = true;
+            numbersReceiptOutput.Visible = true;
 
-                printSound.Play();
-                receiptLabel.Text = "\n\nChicken.Co";
-                Refresh();
-                Thread.Sleep(500);
+            SoundPlayer printSound = new SoundPlayer(Properties.Resources.typeWriter);
+            Refresh();
+            Thread.Sleep(1000);
 
-                printSound.Play();
-                wordsReceiptOutput.Text = $"Chicken x{chickenNumber} ";
-                numbersReceiptOutput.Text = $"@ {chickenPrice.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            receiptLabel.Text = "\n\nChicken.Co";
+            Refresh();
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\nGravy x{gravyNumber}";
-                numbersReceiptOutput.Text += $"\n@ {gravyPrice.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text = $"Chicken x{chickenNumber} ";
+            numbersReceiptOutput.Text = $"@ {chickenPrice.ToString("C")}";
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\nDrinks x{drinkNumber}";
-                numbersReceiptOutput.Text += $"\n@ {drinkPrice.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\nGravy x{gravyNumber}";
+            numbersReceiptOutput.Text += $"\n@ {gravyPrice.ToString("C")}";
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\n\nSubtotal ";
-                numbersReceiptOutput.Text += $"\n\n{subTotal.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\nDrinks x{drinkNumber}";
+            numbersReceiptOutput.Text += $"\n@ {drinkPrice.ToString("C")}";
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\nTax ";
-                numbersReceiptOutput.Text += $"\n{taxAmount.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\n\nSubtotal ";
+            numbersReceiptOutput.Text += $"\n\n{subTotal.ToString("C")}";
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\nTotal ";
-                numbersReceiptOutput.Text += $"\n{totalPrice.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\nTax ";
+            numbersReceiptOutput.Text += $"\n{taxAmount.ToString("C")}";
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\n\nTendered ";
-                numbersReceiptOutput.Text += $"\n\n{tendered.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\nTotal ";
+            numbersReceiptOutput.Text += $"\n{totalPrice.ToString("C")}";
+            Thread.Sleep(500);
 
-                printSound.Play();
-                wordsReceiptOutput.Text += $"\nChange";
-                numbersReceiptOutput.Text += $"\n{change.ToString("C")}";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\n\nTendered ";
+            numbersReceiptOutput.Text += $"\n\n{tendered.ToString("C")}";
+            Thread.Sleep(500);
 
-                wordsReceiptOutput.Text += $"\n\nHave a nice day.";
-                Thread.Sleep(500);
+            printSound.Play();
+            wordsReceiptOutput.Text += $"\nChange";
+            numbersReceiptOutput.Text += $"\n{change.ToString("C")}";
+            Thread.Sleep(500);
 
-
-            }
-            else
-            {
-                changeOuput.Text = "ERROR";
-            }
+            wordsReceiptOutput.Text += $"\n\nHave a nice day.";
+            Thread.Sleep(500);
 
         }
 
@@ -173,6 +176,10 @@ namespace CashRegister
             receiptLabel.Visible = false;
             wordsReceiptOutput.Visible = false;
             numbersReceiptOutput.Visible = false;
+
+            calculateTotalsButton.Enabled = true;
+            calculateChangeButton.Enabled = false;
+            receiptButton.Enabled = false;
         }
     }
 }

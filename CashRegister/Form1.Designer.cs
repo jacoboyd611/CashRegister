@@ -215,6 +215,7 @@
             // 
             this.calculateChangeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.calculateChangeButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.calculateChangeButton.Enabled = false;
             this.calculateChangeButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.calculateChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateChangeButton.Location = new System.Drawing.Point(12, 307);
@@ -229,6 +230,7 @@
             // 
             this.receiptButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.receiptButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.receiptButton.Enabled = false;
             this.receiptButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.receiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.receiptButton.Location = new System.Drawing.Point(12, 390);
@@ -333,6 +335,7 @@
             // 
             // chickenInput
             // 
+            this.chickenInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chickenInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chickenInput.Location = new System.Drawing.Point(225, 9);
             this.chickenInput.Name = "chickenInput";
@@ -341,6 +344,7 @@
             // 
             // gravyInput
             // 
+            this.gravyInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gravyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gravyInput.Location = new System.Drawing.Point(225, 42);
             this.gravyInput.Name = "gravyInput";
@@ -349,6 +353,7 @@
             // 
             // drinkInput
             // 
+            this.drinkInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.drinkInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drinkInput.Location = new System.Drawing.Point(225, 73);
             this.drinkInput.Name = "drinkInput";
