@@ -78,7 +78,7 @@ namespace CashRegister
         {
             // Prints and formats the receipt
             // Prevents the receipt from printing without all the values
-            if ((tendered > totalPrice) && (totalPrice > 0))
+            if ((tendered >= totalPrice) && (totalPrice > 0))
             {
                 receiptLabel.Visible = true;
                 wordsReceiptOutput.Visible = true;
