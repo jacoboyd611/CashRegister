@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CashRegister
 {
@@ -73,27 +74,44 @@ namespace CashRegister
             receiptLabel.Visible = true;
             wordsReceiptOutput.Visible = true;
             numbersReceiptOutput.Visible = true;
+            Thread.Sleep(500);
+
             receiptLabel.Text = "\n\nChicken.Co";
+            Refresh();
+            Thread.Sleep(500);
 
             wordsReceiptOutput.Text = $"Chicken x{chickenNumber} ";
-            wordsReceiptOutput.Text += $"\nGravy x{gravyNumber}";
-            wordsReceiptOutput.Text += $"\nDrinks x{drinkNumber}";
-            wordsReceiptOutput.Text += $"\n\nSubtotal ";
-            wordsReceiptOutput.Text += $"\nTax ";
-            wordsReceiptOutput.Text += $"\nTotal ";
-            wordsReceiptOutput.Text += $"\n\nTendered ";
-            wordsReceiptOutput.Text += $"\nChange";
-
             numbersReceiptOutput.Text = $"@ {chickenPrice.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n@ {gravyPrice.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n@ {drinkPrice.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n\n{subTotal.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n{taxAmount.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n{totalPrice.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n\n{tendered.ToString("C")}";
-            numbersReceiptOutput.Text += $"\n{change.ToString("C")}";
-              
+            Thread.Sleep(500);
 
+            wordsReceiptOutput.Text += $"\nGravy x{gravyNumber}";
+            numbersReceiptOutput.Text += $"\n@ {gravyPrice.ToString("C")}";
+            Thread.Sleep(500);
+
+            wordsReceiptOutput.Text += $"\nDrinks x{drinkNumber}";
+            numbersReceiptOutput.Text += $"\n@ {drinkPrice.ToString("C")}";
+            Thread.Sleep(500);
+
+            wordsReceiptOutput.Text += $"\n\nSubtotal ";
+            numbersReceiptOutput.Text += $"\n\n{subTotal.ToString("C")}";
+            Thread.Sleep(500);
+
+            wordsReceiptOutput.Text += $"\nTax ";
+            numbersReceiptOutput.Text += $"\n{taxAmount.ToString("C")}";
+            Thread.Sleep(500);
+
+            wordsReceiptOutput.Text += $"\nTotal ";
+            numbersReceiptOutput.Text += $"\n{totalPrice.ToString("C")}";
+            Thread.Sleep(500);
+
+            wordsReceiptOutput.Text += $"\n\nTendered ";
+            numbersReceiptOutput.Text += $"\n\n{tendered.ToString("C")}";
+            Thread.Sleep(500);
+
+            wordsReceiptOutput.Text += $"\nChange";
+            numbersReceiptOutput.Text += $"\n{change.ToString("C")}";
+            Thread.Sleep(500);
+            
         }
     }
 }
